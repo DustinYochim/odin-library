@@ -70,7 +70,10 @@ function displayBooks() {
 
     const removeBookButton = document.createElement("button");
     removeBookButton.classList.add("remove-book-button");
-    removeBookButton.textContent = "Remove";
+    const removeImg = document.createElement("img");
+    removeImg.classList.add("remove-image");
+    removeImg.src = "../img/close.svg";
+    removeBookButton.appendChild(removeImg);
     removeBookButton.dataset.index = myLibrary.indexOf(book);
     newBook.appendChild(removeBookButton);
 
