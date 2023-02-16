@@ -1,11 +1,13 @@
 // Get the modal
-var modal = document.getElementById("book-form");
+const bookshelf = [];
+
+const modal = document.getElementById("book-form");
 
 // Get the button that opens the modal
-var btn = document.getElementById("add-book");
+const btn = document.getElementById("add-book");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
@@ -19,7 +21,7 @@ span.onclick = function () {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.setAttribute("style", "display: none;");
   }
 };
