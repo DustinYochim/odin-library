@@ -1,0 +1,40 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER STYLES */
+
+/* MAIN STYLES */
+main {
+  flex: 1;
+}
+
+/* FOOTER STYLES */
+footer {
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+footer a img {
+  height: 15px;
+}
