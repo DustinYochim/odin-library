@@ -16,7 +16,7 @@ body {
   font-size: 16px;
 
   min-height: 100vh;
-  margin: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -43,6 +43,7 @@ header button {
 
 header button img {
   height: 30px;
+  cursor: pointer;
 }
 /* MAIN STYLES */
 main {
@@ -51,12 +52,38 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+/* LIBRARY STYLES */
+.library {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book {
+  border-top: 7px solid black;
+  box-shadow: 1px 1px 2px black;
+  padding: 10px;
+}
+
+.remove-book-button {
+  height: 20px;
+  cursor: pointer;
+  float: right;
+}
+
 /* BOOK FORM */
 
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .close {
@@ -64,13 +91,15 @@ main {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 .book-form {
   background-color: #f6f7f8;
   border: 1px solid #d6d9dc;
   border-radius: 3px;
+  height: min-content;
 
-  /* width: 80%; */
+  width: 80%;
   padding: 20px;
   margin-top: 20px;
   /* margin: 0 0 40px 0; */
@@ -115,7 +144,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .form-row label {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .legacy-form-row {
@@ -124,7 +153,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .legacy-form-row legend {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .legacy-form-row .radio-label {
@@ -141,10 +170,31 @@ input[type="number"]::-webkit-outer-spin-button {
 .legacy-form-row input[type="radio"] {
   float: left;
 }
+
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #ffffff;
+  background-color: #5995da;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #76aeed;
+}
+
+.form-row button:active {
+  background-color: #407fc7;
+}
 /* FOOTER STYLES */
 footer {
   margin-top: auto;
-  margin-bottom: 5px;
 }
 footer a {
   text-decoration: none;
