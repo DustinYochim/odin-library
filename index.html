@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <link rel="icon" href="./img/book.svg" type="image/x-icon" />
     <title>Library</title>
   </head>
   <body>
-    <header><h1 class="site-title">library</h1></header>
+    <!-- HEADER -->
+    <header>
+      <h1 class="site-title">library</h1>
+      <button id="add-book">
+        <img src="./img/plus-icon.svg" alt="Plus icon" />
+      </button>
+    </header>
+    <!-- MAIN -->
     <main>
-      <button>+</button>
-      <div class="bookshelf">book</div>
+      <!-- MODAL -->
+      <div id="book-form" class="modal">
+        <form class="modal-content">
+          <span class="close">&times;</span>
+        </form>
+      </div>
+      <div class="bookshelf"></div>
     </main>
+    <!-- FOOTER -->
     <footer>
       <a href="https://github.com/DustinYochim">
         Copyright 2023 ©DustinYochim
