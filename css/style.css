@@ -86,6 +86,29 @@ main {
   height: 20px;
 }
 
+.button-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.button-div > img {
+  height: 20px;
+}
+
+.status-button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.status-button > img {
+  height: 20px;
+}
+
 /* BOOK FORM */
 
 .modal {

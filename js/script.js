@@ -68,6 +68,17 @@ function displayBooks() {
     newBookStatus.textContent = `Status: ${book.status}`;
     newBook.appendChild(newBookStatus);
 
+    const buttonDiv = document.createElement("div");
+    buttonDiv.classList.add("button-div");
+
+    const toggleStatus = document.createElement("button");
+    toggleStatus.classList.add("status-button");
+    const editIcon = document.createElement("img");
+    editIcon.src = "../img/edit.svg";
+    toggleStatus.appendChild(editIcon);
+    toggleStatus.dataset.index = myLibrary.indexOf(book);
+    buttonDiv.appendChild(toggleStatus);
+
     const removeBookButton = document.createElement("button");
     removeBookButton.classList.add("remove-book-button");
     const removeImg = document.createElement("img");
@@ -75,7 +86,9 @@ function displayBooks() {
     removeImg.src = "../img/close.svg";
     removeBookButton.appendChild(removeImg);
     removeBookButton.dataset.index = myLibrary.indexOf(book);
-    newBook.appendChild(removeBookButton);
+    buttonDiv.appendChild(removeBookButton);
+
+    newBook.appendChild(buttonDiv);
 
     library.appendChild(newBook);
   });
@@ -109,6 +122,20 @@ function addEventListeners() {
     }
   });
 
+  const editButtons = document.querySelectorAll(".status-button");
+  editButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const { index } = button.dataset;
+      if (myLibrary[index].status === "read") {
+        myLibrary[index].status = "not read";
+      } else {
+        myLibrary[index].status = "read";
+      }
+      displayBooks();
+      addEventListeners();
+    });
+  });
+
   const removeButtons = document.querySelectorAll(".remove-book-button");
   removeButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -119,18 +146,6 @@ function addEventListeners() {
   });
 }
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read yet");
-const theGiver = new Book("The Giver", "J.R.R. Tolkien", 295, "not read yet");
-const otherBook = new Book(
-  "The Hitchhiker's Guide to the Galaxy",
-  "J.R.R. Tolkien",
-  295,
-  "not read yet"
-);
-
-myLibrary.push(theHobbit);
-myLibrary.push(theGiver);
-myLibrary.push(otherBook);
 function main() {
   displayBooks();
   addEventListeners();
