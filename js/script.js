@@ -1,27 +1,50 @@
 // Get the modal
 const bookshelf = [];
 
-const modal = document.getElementById("book-form");
+class Book {
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+  }
+}
+function addToBookshelf() {
+  const title = prompt("Title");
+  const author = prompt("Author");
+  const pages = prompt("Pages");
+  const status = prompt("Status");
+  const newBook = new Book(title, author, pages, status);
+  bookshelf.push(newBook);
+}
 
-// Get the button that opens the modal
-const btn = document.getElementById("add-book");
+function showBookshelf() {
+  bookshelf.forEach((book) => {
+    console.log(book);
+  });
+}
 
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
+const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read yet");
+bookshelf.push(theHobbit);
 
-// When the user clicks on the button, open the modal
+// addToBookshelf();
+showBookshelf();
+
+// MODAL
+const modal = document.querySelector(".modal");
+const btn = document.querySelector(".add-book");
+const span = document.querySelector(".close");
+console.log(span);
 btn.onclick = function () {
-  modal.setAttribute("style", "display: block;");
+  modal.style.display = "block";
 };
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-  modal.setAttribute("style", "display: none;");
+  modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target === modal) {
-    modal.setAttribute("style", "display: none;");
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 };

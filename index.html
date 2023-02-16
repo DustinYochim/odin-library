@@ -14,18 +14,41 @@
     <!-- HEADER -->
     <header>
       <h1 class="site-title">library</h1>
-      <button id="add-book">
+      <button class="add-book">
         <img src="./img/plus-icon.svg" alt="Plus icon" />
       </button>
     </header>
     <!-- MAIN -->
     <main>
       <!-- MODAL -->
-      <div id="book-form" class="modal">
-        <form class="modal-content">
-          <span class="close">&times;</span>
+      <div class="modal">
+        <form action="" class="book-form">
+          <div class="form-header">
+            <h3 class="form-title">Add Book</h3>
+            <span class="close">&times;</span>
+          </div>
+          <div class="form-row">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" />
+          </div>
+          <div class="form-row">
+            <label for="author">Author</label>
+            <input id="author" name="author" type="text" />
+          </div>
+          <div class="form-row">
+            <label for="pages">Pages</label>
+            <input id="pages" name="pages" type="number" />
+          </div>
+          <fieldset class="legacy-form-row">
+            <legend>Status</legend>
+            <input id="not-read" name="status" type="radio" value="not-read" />
+            <label for="not-read" class="radio-label">not-read</label>
+            <input id="read" name="status" type="radio" value="read" />
+            <label for="read" class="radio-label">read</label>
+          </fieldset>
         </form>
       </div>
+      <!-- BOOKSHELF -->
       <div class="bookshelf"></div>
     </main>
     <!-- FOOTER -->
