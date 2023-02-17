@@ -67,6 +67,15 @@ main {
   box-shadow: 1px 1px 2px black;
   padding: 10px;
   min-width: 70vw;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .book-author,
@@ -91,8 +100,7 @@ main {
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
-
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 .button-div > img {
@@ -253,8 +261,8 @@ footer a img {
     margin-bottom: 20px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
   }
 
   .book {

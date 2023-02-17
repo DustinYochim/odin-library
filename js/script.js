@@ -50,7 +50,7 @@ function displayBooks() {
 
     const newBookTitle = document.createElement("div");
     newBookTitle.classList.add("book-title");
-    newBookTitle.textContent = `Title: ${book.title}`;
+    newBookTitle.textContent = `${book.title}`;
     newBook.appendChild(newBookTitle);
 
     const newBookAuthor = document.createElement("div");
