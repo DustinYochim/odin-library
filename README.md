@@ -30,10 +30,3 @@ This project is a simple library application built using HTML, CSS, and JavaScri
 
 You can see a live demo of this project at https://dustinyochim.github.io/odin-library/.
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
