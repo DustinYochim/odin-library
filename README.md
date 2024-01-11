@@ -11,12 +11,6 @@ This project is a simple library application built using HTML, CSS, and JavaScri
 * Add a book to the library
 * Mark a book as read or unread
 * Delete a book from the library
-* Save library data to local storage
-
-## Installation
-
-1. Clone the repository to your local machine using git clone https://github.com/your-username/odin-library.git.
-2. Open index.html in your web browser.
 
 ## Usage
 
