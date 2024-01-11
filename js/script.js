@@ -74,7 +74,7 @@ function displayBooks() {
     const toggleStatus = document.createElement("button");
     toggleStatus.classList.add("status-button");
     const editIcon = document.createElement("img");
-    editIcon.src = "/img/edit.svg";
+    editIcon.src = "./img/edit.svg";
     toggleStatus.appendChild(editIcon);
     toggleStatus.dataset.index = myLibrary.indexOf(book);
     buttonDiv.appendChild(toggleStatus);
